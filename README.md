@@ -24,7 +24,7 @@ Add the code necessary in `index.js` and `api/server.js` to create a Web API and
 
 | Method | URL            | Description                                                                                            |
 | ------ | -------------- | ------------------------------------------------------------------------------------------------------ |
-| POST   | /api/users     | Creates a user using the information sent inside the `request body`.                                   |
+| POST   |                | Creates a user using the information sent inside the `request body`.                                   |
 | GET    | /api/users     | Returns an array users.                                                                                |
 | GET    | /api/users/:id | Returns the user object with the specified `id`.                                                       |
 | DELETE | /api/users/:id | Removes the user with the specified `id` and returns the deleted user.                                 |
@@ -50,7 +50,7 @@ You can find them inside `api/users/model.js`. All of these functions return Pro
 - `findById` Takes an `id` and resolves to the user with that id (or null if the id does not exist).
 - `insert` Takes a new user `{ name, bio }` and resolves to the the newly created user `{ id, name, bio }`.
 - `update` Takes an `id` and an existing user `{ name, bio }` and resolves the updated user `{ id, name, bio}` (or null if the id does not exist).
-- `remove` Takes an `id`  and resolves to the deleted user `{ id, name, bio }`.
+- `remove` Takes an `id` and resolves to the deleted user `{ id, name, bio }`.
 
 #### Endpoint Specifications
 
@@ -82,7 +82,7 @@ When the client makes a `GET` request to `/api/users/:id`:
 - If the _user_ with the specified `id` is not found:
 
   - respond with HTTP status code `404` (Not Found).
-  - return the following JSON object: `{ message: "The user with the specified ID does not exist" }`.
+  - return the following JSON object: `{ message: " " }`.
 
 - If there's an error in retrieving the _user_ from the database:
   - respond with HTTP status code `500`.
